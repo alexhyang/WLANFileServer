@@ -12,14 +12,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],\
     "dependencyTreeRoots": [\
       {\
-        "name": "local_file_server",\
+        "name": "server",\
         "reference": "workspace:."\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
-      ["local_file_server", ["workspace:."]]\
+      ["server", ["workspace:."]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -1024,19 +1024,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["local_file_server", [\
-        ["workspace:.", {\
-          "packageLocation": "./",\
-          "packageDependencies": [\
-            ["local_file_server", "workspace:."],\
-            ["cors", "npm:2.8.5"],\
-            ["dotenv", "npm:16.0.3"],\
-            ["express", "npm:4.18.2"],\
-            ["nodemon", "npm:2.0.22"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
       ["lru-cache", [\
         ["npm:6.0.0", {\
           "packageLocation": "./.yarn/cache/lru-cache-npm-6.0.0-b4c8668fe1-f97f499f89.zip/node_modules/lru-cache/",\
@@ -1637,6 +1624,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["send", "npm:0.18.0"]\
           ],\
           "linkType": "HARD"\
+        }]\
+      ]],\
+      ["server", [\
+        ["workspace:.", {\
+          "packageLocation": "./",\
+          "packageDependencies": [\
+            ["server", "workspace:."],\
+            ["cors", "npm:2.8.5"],\
+            ["dotenv", "npm:16.0.3"],\
+            ["express", "npm:4.18.2"],\
+            ["nodemon", "npm:2.0.22"]\
+          ],\
+          "linkType": "SOFT"\
         }]\
       ]],\
       ["set-blocking", [\

@@ -843,17 +843,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"local_file_server@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "local_file_server@workspace:."
-  dependencies:
-    cors: ^2.8.5
-    dotenv: ^16.0.3
-    express: ^4.18.2
-    nodemon: ^2.0.22
-  languageName: unknown
-  linkType: soft
-
 "lru-cache@npm:^6.0.0":
   version: 6.0.0
   resolution: "lru-cache@npm:6.0.0"
@@ -1397,6 +1386,17 @@ __metadata:
   checksum: af57fc13be40d90a12562e98c0b7855cf6e8bd4c107fe9a45c212bf023058d54a1871b1c89511c3958f70626fff47faeb795f5d83f8cf88514dbaeb2b724464d
   languageName: node
   linkType: hard
+
+"server@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "server@workspace:."
+  dependencies:
+    cors: ^2.8.5
+    dotenv: ^16.0.3
+    express: ^4.18.2
+    nodemon: ^2.0.22
+  languageName: unknown
+  linkType: soft
 
 "set-blocking@npm:^2.0.0":
   version: 2.0.0

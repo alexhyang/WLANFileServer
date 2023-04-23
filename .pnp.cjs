@@ -31,6 +31,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],\
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
+            ["http-errors", "npm:2.0.0"],\
+            ["ip", "npm:1.1.8"],\
+            ["morgan", "npm:1.10.0"],\
             ["nodemon", "npm:2.0.22"]\
           ],\
           "linkType": "SOFT"\
@@ -183,6 +186,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/balanced-match-npm-1.0.2-a53c126459-9706c088a2.zip/node_modules/balanced-match/",\
           "packageDependencies": [\
             ["balanced-match", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["basic-auth", [\
+        ["npm:2.0.1", {\
+          "packageLocation": "./.yarn/cache/basic-auth-npm-2.0.1-f1627ef330-3419b805d5.zip/node_modules/basic-auth/",\
+          "packageDependencies": [\
+            ["basic-auth", "npm:2.0.1"],\
+            ["safe-buffer", "npm:5.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -942,6 +955,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["ip", [\
+        ["npm:1.1.8", {\
+          "packageLocation": "./.yarn/cache/ip-npm-1.1.8-abea558b72-a2ade53eb3.zip/node_modules/ip/",\
+          "packageDependencies": [\
+            ["ip", "npm:1.1.8"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/ip-npm-2.0.0-204facb3cc-cfcfac6b87.zip/node_modules/ip/",\
           "packageDependencies": [\
@@ -1229,6 +1249,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["morgan", [\
+        ["npm:1.10.0", {\
+          "packageLocation": "./.yarn/cache/morgan-npm-1.10.0-a0da109b6b-fb41e226ab.zip/node_modules/morgan/",\
+          "packageDependencies": [\
+            ["morgan", "npm:1.10.0"],\
+            ["basic-auth", "npm:2.0.1"],\
+            ["debug", "virtual:759fd14db92b54abdb7afb3d21dbf8d50f1a5c59c96cd3f963ce3e3ed063bdb801142fae5f01cc81fb79f7ddc13b7c31a9deb9d5a9cfa48ec107f83de8f7f40e#npm:2.6.9"],\
+            ["depd", "npm:2.0.0"],\
+            ["on-finished", "npm:2.3.0"],\
+            ["on-headers", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ms", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/ms-npm-2.0.0-9e1101a471-0e6a22b8b7.zip/node_modules/ms/",\
@@ -1358,11 +1392,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["on-finished", [\
+        ["npm:2.3.0", {\
+          "packageLocation": "./.yarn/cache/on-finished-npm-2.3.0-4ce92f72c6-1db595bd96.zip/node_modules/on-finished/",\
+          "packageDependencies": [\
+            ["on-finished", "npm:2.3.0"],\
+            ["ee-first", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:2.4.1", {\
           "packageLocation": "./.yarn/cache/on-finished-npm-2.4.1-907af70f88-d20929a25e.zip/node_modules/on-finished/",\
           "packageDependencies": [\
             ["on-finished", "npm:2.4.1"],\
             ["ee-first", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["on-headers", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/on-headers-npm-1.0.2-e7cd3ea25e-2bf1346721.zip/node_modules/on-headers/",\
+          "packageDependencies": [\
+            ["on-headers", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1550,6 +1601,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["safe-buffer", [\
+        ["npm:5.1.2", {\
+          "packageLocation": "./.yarn/cache/safe-buffer-npm-5.1.2-c27fedf6c4-f2f1f7943c.zip/node_modules/safe-buffer/",\
+          "packageDependencies": [\
+            ["safe-buffer", "npm:5.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:5.2.1", {\
           "packageLocation": "./.yarn/cache/safe-buffer-npm-5.2.1-3481c8aa9b-b99c4b41fd.zip/node_modules/safe-buffer/",\
           "packageDependencies": [\
@@ -1634,6 +1692,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],\
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
+            ["http-errors", "npm:2.0.0"],\
+            ["ip", "npm:1.1.8"],\
+            ["morgan", "npm:1.10.0"],\
             ["nodemon", "npm:2.0.22"]\
           ],\
           "linkType": "SOFT"\

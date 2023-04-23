@@ -7,10 +7,8 @@ router.get("/", (req, res) => {
   sendJSONList(req.query.key, res, "images");
 });
 
-router.get("/:subject/:filename", (req, res) => {
-  res.sendFile(
-    path.resolve(`assets/images/${req.params.subject}/${req.params.filename}`)
-  );
+router.get("/:filename(*)", (req, res) => {
+  res.sendFile(path.resolve(`assets/images/${req.params.filename}`));
 });
 
 module.exports = router;

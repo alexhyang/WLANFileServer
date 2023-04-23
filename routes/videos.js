@@ -7,14 +7,8 @@ router.get("/", (req, res) => {
   sendJSONList(req.query.key, res, "videos");
 });
 
-router.get("/:filename", (req, res) => {
+router.get("/:filename(*)", (req, res) => {
   res.sendFile(path.resolve(`assets/videos/${req.params.filename}`));
-});
-
-router.get("/:subject/:filename", (req, res) => {
-  res.sendFile(
-    path.resolve(`assets/videos/${req.params.subject}/${req.params.filename}`)
-  );
 });
 
 module.exports = router;

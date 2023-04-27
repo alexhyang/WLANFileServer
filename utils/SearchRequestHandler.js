@@ -20,19 +20,43 @@ class SearchRequestHandler {
     this.urlRoot = `http://${ip.address()}:${process.env.PORT}/${
       this.relativePath
     }`;
+    this.rootDir = this.queryExists(req.query.rootDir)
+      ? `./assets/${req.query.rootDir}`
+      : undefined;
     this.fileName = req.query.name;
     this.fileType = req.query.fileType;
   }
 
   sendResponse() {
-    if (fs.existsSync(this.searchRootDir)) {
-      if (this.queryContainsFileName()) {
-        this.sendFileUrl();
-      } else {
-        this.sendListOfUrls();
-      }
+    if (this.rootDir != undefined && this.rootDir != "") {
+      // return subdirectory
+      this.sendSubdirectory();
     } else {
-      this.res.status(404).end();
+      // return file(s)
+      if (fs.existsSync(this.searchRootDir)) {
+        if (this.queryExists(this.fileName)) {
+          this.sendFileUrl();
+        } else {
+          this.sendListOfUrls();
+        }
+      } else {
+        this.res.status(404).end();
+      }
+    }
+  }
+
+  async sendSubdirectory() {
+    try {
+      console.log(this.rootDir);
+      const dirResults = await fs.promises.readdir(this.rootDir, {
+        withFileTypes: true,
+      });
+      const subDirs = dirResults
+        .filter((dirent) => dirent.isDirectory())
+        .map((dirent) => dirent.name);
+      this.res.json(subDirs);
+    } catch (err) {
+      console.log(err);
     }
   }
 
@@ -66,8 +90,8 @@ class SearchRequestHandler {
     }
   }
 
-  queryContainsFileName() {
-    return this.fileName != undefined && this.fileName != "";
+  queryExists(queryKey) {
+    return queryKey != undefined && queryKey != "";
   }
 
   generateFileUrl(filename) {

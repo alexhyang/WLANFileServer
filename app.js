@@ -19,11 +19,11 @@ app.use(cors());
 app.use(logger("dev"));
 
 app.use("/", indexRouter);
-app.use("/search", searchRouter);
-app.use("/images", imageRouter);
-app.use("/videos", videoRouter);
-app.use("/texts", textRouter);
-app.use("/favs", favRouter);
+app.use("/api/search", searchRouter);
+app.use("/api/images", imageRouter);
+app.use("/api/videos", videoRouter);
+app.use("/api/texts", textRouter);
+app.use("/api/favs", favRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(`Listening on port ${process.env.PORT}!`);

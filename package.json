@@ -12,8 +12,9 @@
     "http-errors": "^2.0.0"
   },
   "devDependencies": {
-    "ip": "^1.1.8",
+    "ip": "^2.0.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "prettier": "^3.0.0"
   }
 }
